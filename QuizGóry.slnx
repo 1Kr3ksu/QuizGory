@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="QuizGóry/QuizGóry.csproj" />
+  <Folder Name="/Elementy rozwiązania/" />
+  <Project Path="QuizGóry/QuizGóry.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>

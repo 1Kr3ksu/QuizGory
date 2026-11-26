@@ -1,52 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="QuizGóry.MainPage"
-             BackgroundColor="#2E7CB8"
-             >
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="QuizGóry.MainPage"
+    BackgroundColor="#2E7CB8">
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+            Padding="30"
+            Spacing="20">
+
             <Image
-                Source="zad1.jpg"
+                x:Name="ObrazPytania"
                 HeightRequest="300"
                 Aspect="AspectFit"
-                HorizontalOptions="Center"
-        />
+                HorizontalOptions="Center" />
 
             <Label
-                Text="Które to schronisko?"
+                x:Name="TrescPytania"
+                TextColor="White"
                 FontSize="24"
-                TextColor="White"
                 HorizontalOptions="Center"
-                />
+                HorizontalTextAlignment="Center" />
+
             <RadioButton
-                Content="Na Rysiance."
+                x:Name="OdpowiedzPierwsza"
+                GroupName="odpowiedzi"
+                TextColor="White"
                 FontSize="18"
-                TextColor="White"
-                HorizontalOptions="Start"
-                GroupName="schronisko" />
-            <RadioButton   
-                Content="Na Wielkiej Raczy."
-                FontSize="18"   
-                TextColor="White"
-                HorizontalOptions="Start"
-                GroupName="schronisko" />
+                HorizontalOptions="Start" />
+
             <RadioButton
-                Content="Na Wielkiej Rycerzowej."
-                FontSize="18" 
+                x:Name="OdpowiedzDruga"
+                GroupName="odpowiedzi"
                 TextColor="White"
-                HorizontalOptions="Start"
-                GroupName="schronisko" />
-            <Button 
+                FontSize="18"
+                HorizontalOptions="Start" />
+
+            <RadioButton
+                x:Name="OdpowiedzTrzecia"
+                GroupName="odpowiedzi"
+                TextColor="White"
+                FontSize="18"
+                HorizontalOptions="Start" />
+
+            <Button
                 Text="DALEJ"
                 TextColor="White"
-                FontSize="18" 
+                FontSize="18"
                 BackgroundColor="DarkViolet"
                 HorizontalOptions="Center"
-                 />
+                Clicked="OnNextClicked" />
+
+            <Label
+                x:Name="PunktyLabel"
+                Text="Punkty: 0"
+                TextColor="White"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 
